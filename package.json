@@ -1,0 +1,22 @@
+{
+  "name": "crawlerfahasa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src",
+  "scripts": {
+    "crawl_list": "node src/crawler_list.js",
+    "crawl_detail_left": "node src/crawler_detail_left.js",
+    "crawl_detail_right": "node src/crawler_detail_1000_3000.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cheerio": "^1.0.0-rc.12",
+    "he": "^1.2.0",
+    "request": "^2.88.2",
+    "winston": "^3.13.0"
+  }
+}
