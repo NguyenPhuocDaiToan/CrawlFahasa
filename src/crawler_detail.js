@@ -3,8 +3,8 @@ const { getContentHtml, getDetailBook, sleep, proxyScrapeHtml } = require('./uti
 const { successLogger, errorLogger } = require('./utils/logger');
 
 async function main() {
-  const start = 5000;
-  const end = 10000;
+  const start = 20000;
+  const end = 30000;
   const json = fs.readFileSync("src/data/data.json");
   const data = JSON.parse(json);
   const products = data.product_list;
@@ -18,9 +18,9 @@ async function main() {
       Object.keys(book).forEach(key => {
         products[i][key] = book[key];
       });
-      await sleep(1000);
+      await sleep(600);
 
-      if(i % 200 === 0) {
+      if(i % 200 === 0 || i === end - 1) {
         fs.writeFile(`src/data/data_detail_${start}_${end}.json`, JSON.stringify(products.slice(start, end)), (error) => {
           if (error) {
             errorLogger.error("data_detail.json written failed");
