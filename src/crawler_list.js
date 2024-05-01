@@ -19,8 +19,9 @@ function callAPI(query) {
 };
 
 async function main() {
+    // https://www.fahasa.com/fahasa_catalog/product/loadproducts?category_id=3165&currentPage=2&limit=24&order=num_orders&series_type=0
     const query = {
-        category_id: 4,
+        category_id: 3165,
         currentPage: 1,
         limit: 1,
         order: 'num_orders_month',
@@ -36,7 +37,7 @@ async function main() {
 
     if(result) {
         // writing the JSON string content to a file
-        fs.writeFile("src/data/data.json", JSON.stringify(result), (error) => {
+        fs.writeFile("src/data/data_foreign.json", JSON.stringify(result), (error) => {
         // throwing the error
         // in case of a writing problem
         if (error) {
