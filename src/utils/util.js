@@ -73,7 +73,7 @@ getDetailBook = (htmlContent) => {
     const $ = cheerio.load(htmlContent);
 
     // Lấy thông tin tiêu đề sách
-    book.product_name = $('.product-essential .h1').text().trim();
+    book.product_name = $('.product-essential h1').text().trim();
 
     $('.data-table.table-additional tr').each((index, element) => {
         const key = $(element).find('th').text().replace(/\n|\t/g, '').trim();

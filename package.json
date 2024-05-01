@@ -6,7 +6,7 @@
   "scripts": {
     "crawl_list": "node src/crawler_list.js",
     "crawl_detail_left": "node src/crawler_detail_left.js",
-    "crawl_detail_right": "node src/crawler_detail_1000_3000.js",
+    "crawl_detail_right": "node src/crawler_detail.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
